@@ -5,7 +5,7 @@ import userRoute from "./routes/userRoute.js";
 import dns from "node:dns";
 
 const mongodb_url =
-  "mongodb+srv://Kosiasiko:Kosiasiko12345@cluster0.uzw0b7z.mongodb.net/student_Database?appName=Cluster0";
+  "mongodb+srv://Kosiasiko:XXXXXXXX@cluster0.uzw0b7z.mongodb.net/student_Database?appName=Cluster0";
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 const app = express();
 const PORT = 4444;
