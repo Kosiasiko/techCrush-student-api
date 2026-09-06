@@ -1,10 +1,11 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const userRoute = require("./routes/userRoute.js");
+import express from "express";
+import mongoose from "mongoose";
+import userRoute from "./routes/userRoute.js";
 
-const dns = require("node:dns");
+import dns from "node:dns";
+
 const mongodb_url =
-  "mongodb+srv://Kosiasiko:xxxxxx@cluster0.uzw0b7z.mongodb.net/student_Database?appName=Cluster0";
+  "mongodb+srv://Kosiasiko:Kosiasiko12345@cluster0.uzw0b7z.mongodb.net/student_Database?appName=Cluster0";
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 const app = express();
 const PORT = 4444;

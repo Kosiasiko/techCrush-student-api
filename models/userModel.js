@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
   surname: {
@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
   regno: {
     type: Number,
     required: [true, "Registration number is required"],
+    unique: [true, "Reg No already exist"],
     cast: "{VALUE} is not a valid registration number. Registration number must be a number.",
   },
   email: {
@@ -27,4 +28,7 @@ const userSchema = new mongoose.Schema({
     required: [true, "Password is required"],
   },
 });
-module.exports = mongoose.model("User", userSchema);
+
+const User = mongoose.model("User", userSchema);
+
+export default User;
